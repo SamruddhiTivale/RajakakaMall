@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1086048413230",
+    "firebase_url": "https://rajakakamall.firebaseio.com",
+    "project_id": "rajakakamall",
+    "storage_bucket": "rajakakamall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086048413230:android:f34acc046ad5819a61e1bf",
+        "android_client_info": {
+          "package_name": "com.example.rajakakamall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086048413230-p9eimponfqj2k0v2nrn9oku8shii31oi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rajakakamall",
+            "certificate_hash": "496035a0feeda26739e08ee4e4fa65e2ccc93ef0"
+          }
+        },
+        {
+          "client_id": "1086048413230-1d0lbeqrvq32frl45iu10sbol9mdu3bq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEsBpQeCTwsZpdlX4pNFJcn3AthC1hbu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086048413230-1d0lbeqrvq32frl45iu10sbol9mdu3bq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
