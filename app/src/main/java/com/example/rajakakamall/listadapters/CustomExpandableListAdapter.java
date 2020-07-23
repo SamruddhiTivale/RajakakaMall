@@ -1,4 +1,4 @@
-package com.example.rajakakamall.Adapter;
+package com.example.rajakakamall.listadapters;
 import java.util.HashMap;
 import java.util.List;
 import android.content.Context;

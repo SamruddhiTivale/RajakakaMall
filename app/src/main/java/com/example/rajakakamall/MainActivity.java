@@ -2,11 +2,13 @@ package com.example.rajakakamall;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.rajakakamall.login.LoginActivity;
+import com.example.rajakakamall.login.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                Intent intent=new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         joinNowBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,RegisterActivity.class);
+                Intent intent=new Intent(MainActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });
