@@ -1,13 +1,15 @@
-package com.example.rajakakamall;
+package com.example.rajakakamall.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.rajakakamall.home.HomePageActivity;
+import com.example.rajakakamall.R;
 
 public class LoginActivity extends AppCompatActivity {
     private Button loginLoginBtn;
@@ -25,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         loginLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
+                Intent intent=new Intent(LoginActivity.this, HomePageActivity.class);
                 startActivity(intent);
             }
         });

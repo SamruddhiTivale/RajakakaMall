@@ -1,8 +1,6 @@
-package com.example.rajakakamall;
+package com.example.rajakakamall.home;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
@@ -12,11 +10,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.rajakakamall.Adapter.CustomExpandableListAdapter;
-import com.example.rajakakamall.Drawer.ExpandableListDataPump;
+import com.example.rajakakamall.R;
+import com.example.rajakakamall.drawer.ExpandableListDataPump;
+import com.example.rajakakamall.listadapters.CustomExpandableListAdapter;
+import com.example.rajakakamall.listadapters.ProductsAdapter;
+import com.example.rajakakamall.models.Product;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -24,7 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class HomeActivity extends AppCompatActivity
+public class HomePageActivity extends AppCompatActivity
         implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     private ImageView navToggleBtn;
@@ -34,12 +38,66 @@ public class HomeActivity extends AppCompatActivity
     List<String> expandableListTitle;
     HashMap<String, List<String>> expandableListDetail;
     DrawerLayout drawerLayout;
+    CardView cardView;
 
+    //a list to store all the products
+    List<Product> productList;
+
+    //the recyclerview
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
+
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //initializing the productlist
+        productList = new ArrayList<>();
+
+
+        //adding some items to our list
+        productList.add(
+                new Product(
+                        1,
+                        "LED TV 18 SAMSUNG",
+                        "18 inch, 1.35 kg",
+                        4.3,
+                        24000,
+                        R.drawable.img1));
+
+        productList.add(
+                new Product(
+                        1,
+                        "OVEN ",
+                        "15*10 inch, Gray, 10.659 kg",
+                        4.3,
+                        30000,
+                        R.drawable.img2));
+
+        productList.add(
+                new Product(
+                        1,
+                        "Air Cooler",
+                        "20.3 inch, White, 12.35 kg",
+                        4.3,
+                        12000,
+                        R.drawable.img3));
+
+        //creating recyclerview adapter
+        ProductsAdapter adapter = new ProductsAdapter(this, productList);
+
+        //setting adapter to recyclerview
+        recyclerView.setAdapter(adapter);
+
+
+
+
+
         // get the listview
         expandableListView = (ExpandableListView) findViewById(R.id.list_group);
 
@@ -79,6 +137,8 @@ public class HomeActivity extends AppCompatActivity
         });
         mainMethod();
     }
+
+
 
 
     @Override
@@ -139,5 +199,9 @@ public class HomeActivity extends AppCompatActivity
 
         }
     }
-}
+
+
+    }
+
+
 

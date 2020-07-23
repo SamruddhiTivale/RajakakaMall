@@ -1,10 +1,12 @@
-package com.example.rajakakamall;
+package com.example.rajakakamall.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.example.rajakakamall.R;
 
 public class RegisterActivity extends AppCompatActivity {
     private Button createAccount;

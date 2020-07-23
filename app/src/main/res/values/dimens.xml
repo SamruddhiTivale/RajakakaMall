@@ -7,5 +7,6 @@
     <dimen name="font_normal_edit_text">16sp</dimen>
     <dimen name="nav_drawer_item_vertical_padding">12dp</dimen>
     <dimen name="nav_drawer_item_font_size">20sp</dimen>
-
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
 </resources>
