@@ -90,7 +90,7 @@
             android:layout_below="@+id/logo"
             android:src="@drawable/productbar" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_below="@+id/productbarbelowlogo"
             android:layout_width="match_parent"

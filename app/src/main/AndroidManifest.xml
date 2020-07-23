@@ -12,7 +12,6 @@
         <activity android:name=".home.HomePageActivity"></activity>
         <activity android:name=".login.RegisterActivity" />
         <activity android:name=".login.LoginActivity" />
-        <activity android:name=".Login.LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
