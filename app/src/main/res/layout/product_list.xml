@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="288dp"
+        android:layout_height="266dp"
         android:layout_margin="5dp">
 
         <RelativeLayout
@@ -20,58 +21,74 @@
                 android:layout_height="92dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="48dp"
-                android:padding="4dp"/>
+                android:padding="4dp" />
 
             <TextView
                 android:id="@+id/textViewTitle"
-                android:layout_width="match_parent"
+                android:layout_width="373dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/imageView"
                 android:layout_marginLeft="5dp"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:layout_marginTop="12dp"
+                android:textSize="15sp"
                 android:textColor="#000000" />
 
-            <TextView
-                android:id="@+id/textViewShortDesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewTitle"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/textViewTitle"
-                android:text="13.3 Inch, 256 GB"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
-
-            <TextView
-                android:id="@+id/textViewRating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewShortDesc"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="51dp"
-                android:layout_toRightOf="@id/textViewPrice"
-                android:background="@color/colorPrimary"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="4.7"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewPrice"
                 android:layout_width="wrap_content"
-                android:layout_height="18dp"
-                android:layout_below="@id/textViewRating"
-                android:layout_marginLeft="-149dp"
-                android:layout_marginTop="-23dp"
-                android:layout_toRightOf="@id/imageView"
-                android:text="INR 56990"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewTitle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="23dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="114dp"
+                android:text="50000"
+                android:textColor="@color/Black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textViewMrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textViewPrice"
+                android:layout_alignBottom="@+id/textViewPrice"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="94dp"
+                android:layout_marginBottom="-1dp"
+                android:layout_toEndOf="@+id/textViewPrice"
+                android:layout_toRightOf="@+id/textViewPrice"
+                android:background="@drawable/strike"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="52000"
                 android:textSize="15sp"
                 android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="1dp"
+                android:layout_marginRight="13dp"
+                app:srcCompat="@drawable/wishlist" />
 
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="129dp"
+        android:layout_height="2dp"
+
+        android:background="?android:attr/listDivider" />
+
 
 </LinearLayout>

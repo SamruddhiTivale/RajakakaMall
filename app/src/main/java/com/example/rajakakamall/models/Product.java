@@ -3,17 +3,17 @@ package com.example.rajakakamall.models;
 public class Product {
     private int id;
     private String title;
-    private String shortdesc;
-    private double rating;
     private double price;
+
+
+    private double mrp;
     private int image;
 
-    public Product(int id, String title, String shortdesc, double rating, double price, int image) {
+    public Product(int id, String title,double price,double mrp,int image) {
         this.id = id;
         this.title = title;
-        this.shortdesc = shortdesc;
-        this.rating = rating;
         this.price = price;
+        this.mrp=mrp;
         this.image = image;
     }
 
@@ -25,17 +25,13 @@ public class Product {
         return title;
     }
 
-    public String getShortdesc() {
-        return shortdesc;
-    }
-
-    public double getRating() {
-        return rating;
-    }
-
     public double getPrice() {
         return price;
     }
+    public double getMrp() {
+        return mrp;
+    }
+
 
     public int getImage() {
         return image;

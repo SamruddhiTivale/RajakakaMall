@@ -5,14 +5,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -38,7 +39,6 @@ public class HomePageActivity extends AppCompatActivity
     List<String> expandableListTitle;
     HashMap<String, List<String>> expandableListDetail;
     DrawerLayout drawerLayout;
-    CardView cardView;
 
     //a list to store all the products
     List<Product> productList;
@@ -55,7 +55,9 @@ public class HomePageActivity extends AppCompatActivity
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+        // set a GridLayoutManager with default vertical orientation and 2 number of columns
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(),2);
+        recyclerView.setLayoutManager(gridLayoutManager); // set LayoutManager to RecyclerView
         //initializing the productlist
         productList = new ArrayList<>();
 
@@ -65,34 +67,57 @@ public class HomePageActivity extends AppCompatActivity
                 new Product(
                         1,
                         "LED TV 18 SAMSUNG",
-                        "18 inch, 1.35 kg",
-                        4.3,
+                        20000,
                         24000,
                         R.drawable.img1));
 
         productList.add(
                 new Product(
-                        1,
+                        2,
                         "OVEN ",
-                        "15*10 inch, Gray, 10.659 kg",
-                        4.3,
-                        30000,
+                        42000,
+                        45000,
                         R.drawable.img2));
 
         productList.add(
                 new Product(
-                        1,
+                        3,
                         "Air Cooler",
-                        "20.3 inch, White, 12.35 kg",
-                        4.3,
-                        12000,
+                        61500,
+                        59999,
                         R.drawable.img3));
+
+        productList.add(
+                new Product(
+                        4,
+                        "Samsung Galaxy M01",
+                        8899,
+                        8999,
+                        R.drawable.samsungmob));
+
+        productList.add(
+                new Product(
+                        5,
+                        "Philips HP8143/00 1000 Watt Hair Dryer (Black)",
+                        799,
+                        999,
+                        R.drawable.hairdryer));
+
+        productList.add(
+                new Product(
+                        6,
+                        "Havells Plush Steam Iron, Black\n",
+                        1999,
+                        1199,
+                        R.drawable.iron));
 
         //creating recyclerview adapter
         ProductsAdapter adapter = new ProductsAdapter(this, productList);
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
+
+
 
 
 
