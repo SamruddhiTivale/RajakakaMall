@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.ProductViewHolder> {
 
-
+    OnItemListener onItemListener;
     //this context we will use to inflate the layout
     private Context mCtx;
 
@@ -24,9 +24,10 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
     private List<Product> productList;
 
     //getting the context and product list with constructor
-    public ProductsAdapter(Context mCtx, List<Product> productList) {
+    public ProductsAdapter(Context mCtx, List<Product> productList,OnItemListener onItemListener) {
         this.mCtx = mCtx;
         this.productList = productList;
+        this.onItemListener=onItemListener;
     }
 
     @Override
@@ -34,7 +35,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
         //inflating and returning our view holder
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(R.layout.product_list, null);
-        return new ProductViewHolder(view);
+        return new ProductViewHolder(view,onItemListener);
     }
 
     @Override
@@ -57,18 +58,32 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
     }
 
 
-    class ProductViewHolder extends RecyclerView.ViewHolder {
+    class ProductViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener {
 
         TextView textViewTitle,  textViewPrice, textViewMrp;
         ImageView imageView;
+        OnItemListener onItemListener;
 
-        public ProductViewHolder(View itemView) {
+        public ProductViewHolder(View itemView,OnItemListener onItemListener) {
             super(itemView);
 
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
             textViewMrp=itemView.findViewById(R.id.textViewMrp);
             imageView = itemView.findViewById(R.id.imageView);
+            this.onItemListener=onItemListener;
+
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View v) {
+            onItemListener.onItemClick(getAdapterPosition());
+        }
+    }
+
+    public interface OnItemListener
+    {
+        void onItemClick(int position);
     }
 }

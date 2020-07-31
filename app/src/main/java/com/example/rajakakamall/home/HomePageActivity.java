@@ -1,16 +1,18 @@
 package com.example.rajakakamall.home;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -30,7 +32,7 @@ import java.util.List;
 
 
 public class HomePageActivity extends AppCompatActivity
-        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
+        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ProductsAdapter.OnItemListener {
 
     private ImageView navToggleBtn;
     private TextView my_profile;
@@ -39,6 +41,10 @@ public class HomePageActivity extends AppCompatActivity
     List<String> expandableListTitle;
     HashMap<String, List<String>> expandableListDetail;
     DrawerLayout drawerLayout;
+    CardView cardView;
+
+    private Context context;
+
 
     //a list to store all the products
     List<Product> productList;
@@ -112,7 +118,7 @@ public class HomePageActivity extends AppCompatActivity
                         R.drawable.iron));
 
         //creating recyclerview adapter
-        ProductsAdapter adapter = new ProductsAdapter(this, productList);
+        ProductsAdapter adapter = new ProductsAdapter(this, productList,this);
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
@@ -226,7 +232,20 @@ public class HomePageActivity extends AppCompatActivity
     }
 
 
+    @Override
+    public void onItemClick(int position) {
+
+
+        Intent intent=new Intent(HomePageActivity.this,PrductDetailsActivity.class);
+        intent.putExtra("ItemPosition", position);
+        intent.putExtra("Title", productList.get(position).getTitle());
+        intent.putExtra("DisPrice", productList.get(position).getPrice());
+        intent.putExtra("MRP", productList.get(position).getMrp());
+        intent.putExtra("ProductImage", productList.get(position).getImage());
+
+        startActivity(intent);
     }
+}
 
 
 

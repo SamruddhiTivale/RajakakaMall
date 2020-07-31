@@ -23,6 +23,7 @@
     <string name="continue_shopping"><![CDATA[continue shopping >>]]></string>
     <string name="male">Male</string>
     <string name="Female">female</string>
-
+    <string name="best_seller">Best Sellers</string>
+    <string name="view_all">View All</string>
 
 </resources>
