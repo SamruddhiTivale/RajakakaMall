@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="3dp"
+    android:background="@color/white"
+    tools:context=".home.PrductDetailsActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_product_images"
+        android:layout_width="402dp"
+        android:layout_height="285dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout_view_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewpager_product_images"
+        app:tabBackground="@drawable/dot_selector"
+        app:tabIndicatorHeight="0dp" />
+
+    <TextView
+        android:id="@+id/txtprodetailstitle"
+        android:layout_width="401dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:text="Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablayout_view_pager" />
+
+    <TextView
+        android:id="@+id/txtprodetailsprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="4dp"
+        android:text="Rs.5000"
+        android:textColor="@color/Black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txtprodetailstitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtprodetailstitle" />
+
+    <TextView
+        android:id="@+id/txtprodetailsmrp"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="4dp"
+        android:text="Rs.6000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/txtprodetailsprice"
+        app:layout_constraintTop_toBottomOf="@+id/txtprodetailstitle" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="37dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewpager_product_images"
+        app:srcCompat="@drawable/wishlist" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="45dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="@+id/txtprodetailsmrp"
+        app:layout_constraintEnd_toEndOf="@+id/txtprodetailsmrp"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="@+id/txtprodetailsmrp"
+        app:layout_constraintTop_toTopOf="@+id/txtprodetailsmrp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
