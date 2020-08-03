@@ -1,6 +1,4 @@
 package com.example.rajakakamall.listadapters;
-import java.util.HashMap;
-import java.util.List;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -10,6 +8,9 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
 import com.example.rajakakamall.R;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
     private Context context;

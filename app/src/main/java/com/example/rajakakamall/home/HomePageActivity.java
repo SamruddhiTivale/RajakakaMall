@@ -31,8 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 
 
-public class HomePageActivity extends AppCompatActivity
-        implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ProductsAdapter.OnItemListener {
+public class HomePageActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener, ProductsAdapter.OnItemListener {
 
     private ImageView navToggleBtn;
     private TextView my_profile;

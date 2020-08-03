@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/comp_scrn"
-        android:icon="@drawable/computerscreen"
-        android:title="Oven" />
-    <item
-        android:id="@+id/oven"
-        android:icon="@drawable/microwaveoven"
-        android:title="Oven" />
+  <item
+      android:id="@+id/comp_scrn"
+      android:icon="@drawable/computerscreen"
+      android:title="Oven" />
+  <item
+      android:id="@+id/oven"
+      android:icon="@drawable/microwaveoven"
+      android:title="Oven" />
 
-    <item
-        android:id="@+id/washing_machine"
-        android:icon="@drawable/washingmachine"
-        android:title="Washing Machine"
-        />
-    <item
-        android:id="@+id/air_conditioner"
-        android:icon="@drawable/airconditioner"
-        android:title="AC" />
+  <item
+      android:id="@+id/washing_machine"
+      android:icon="@drawable/washingmachine"
+      android:title="Washing Machine"
+      />
+  <item
+      android:id="@+id/air_conditioner"
+      android:icon="@drawable/airconditioner"
+      android:title="AC" />
 
-    <item
-        android:id="@+id/beuty"
-        android:icon="@drawable/beautypro"
-        android:title="Beaty Products" />
+  <item
+      android:id="@+id/beuty"
+      android:icon="@drawable/beautypro"
+      android:title="Beaty Products" />
 
 
 </menu>

@@ -1,11 +1,9 @@
 package com.example.rajakakamall.home;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
-import android.os.Bundle;
-import android.widget.Button;
-
 
 import com.example.rajakakamall.R;
 import com.example.rajakakamall.listadapters.ProductImagesAdapter;
@@ -37,10 +35,10 @@ public class PrductDetailsActivity extends AppCompatActivity {
         tabLayoutImages.setupWithViewPager(viewPagerImages,true);
 
         List<Integer> productImages = new ArrayList<>();
-        productImages.add(R.drawable.computerscreen);
-        productImages.add(R.drawable.computerscreen);
-        productImages.add(R.drawable.computerscreen);
-        productImages.add(R.drawable.computerscreen);
+        productImages.add(R.drawable.img1);
+        productImages.add(R.drawable.img2);
+        productImages.add(R.drawable.img3);
+        productImages.add(R.drawable.img4);
 
         ProductImagesAdapter productImagesAdapter=new ProductImagesAdapter(productImages);
         viewPagerImages.setAdapter(productImagesAdapter);

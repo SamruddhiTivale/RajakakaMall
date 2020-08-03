@@ -1,29 +1,29 @@
 <resources>
-    <string name="app_name">Rajakaka</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+  <string name="app_name">Rajakaka</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="nav_header_title">Android Studio</string>
+  <string name="nav_header_subtitle">android.studio@android.com</string>
+  <string name="nav_header_desc">Navigation header</string>
+  <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+  <string name="menu_home">Home</string>
+  <string name="menu_gallery">Gallery</string>
+  <string name="menu_slideshow">Slideshow</string>
+  <string name="menu_tools">Tools</string>
+  <string name="menu_share">Share</string>
+  <string name="menu_send">Send</string>
 
-    <!--Navigation Drawer-->
-    <string name="myprofile">My Profile</string>
-    <string name="myorders">My Orders</string>
-    <string name="mywishlist">Wishlist</string>
-    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
-    <string name="saved_address"><![CDATA[Saved Address >>]]></string>
-    <string name="continue_shopping"><![CDATA[continue shopping >>]]></string>
-    <string name="male">Male</string>
-    <string name="Female">female</string>
-    <string name="best_seller">Best Sellers</string>
-    <string name="view_all">View All</string>
+  <!--Navigation Drawer-->
+  <string name="myprofile">My Profile</string>
+  <string name="myorders">My Orders</string>
+  <string name="mywishlist">Wishlist</string>
+  <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+  <string name="saved_address"><![CDATA[Saved Address >>]]></string>
+  <string name="continue_shopping"><![CDATA[continue shopping >>]]></string>
+  <string name="male">Male</string>
+  <string name="Female">female</string>
+  <string name="best_seller">Best Sellers</string>
+  <string name="view_all">View All</string>
 
 </resources>

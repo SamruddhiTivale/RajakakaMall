@@ -1,15 +1,15 @@
 package com.example.rajakakamall.login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.rajakakamall.home.HomePageActivity;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.rajakakamall.R;
+import com.example.rajakakamall.home.HomePageActivity;
 
 public class LoginActivity extends AppCompatActivity {
     private Button loginLoginBtn;
