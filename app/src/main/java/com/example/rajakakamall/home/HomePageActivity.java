@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -40,10 +39,8 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
     List<String> expandableListTitle;
     HashMap<String, List<String>> expandableListDetail;
     DrawerLayout drawerLayout;
-    CardView cardView;
 
     private Context context;
-
 
     //a list to store all the products
     List<Product> productList;
@@ -123,14 +120,9 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
         recyclerView.setAdapter(adapter);
 
 
-
-
-
-
-
         // get the listview
         expandableListView = (ExpandableListView) findViewById(R.id.list_group);
-
+        expandableListView.setDividerHeight(2);
         expandableListDetail = ExpandableListDataPump.getData();
         expandableListTitle = new ArrayList<String>(expandableListDetail.keySet());
         expandableListAdapter = new CustomExpandableListAdapter(this, expandableListTitle, expandableListDetail);
@@ -232,8 +224,7 @@ public class HomePageActivity extends AppCompatActivity implements View.OnClickL
 
 
     @Override
-    public void onItemClick(int position) {
-
+    public void onItemClick(int position) {//sending product data to product details actvity
 
         Intent intent=new Intent(HomePageActivity.this,PrductDetailsActivity.class);
         intent.putExtra("ItemPosition", position);
