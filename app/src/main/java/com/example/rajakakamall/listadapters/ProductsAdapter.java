@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.rajakakamall.R;
@@ -63,6 +64,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
         TextView textViewTitle,  textViewPrice, textViewMrp;
         ImageView imageView;
         OnItemListener onItemListener;
+        CardView cardView;
 
         public ProductViewHolder(View itemView,OnItemListener onItemListener) {
             super(itemView);
@@ -71,9 +73,10 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsAdapter.Produc
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
             textViewMrp=itemView.findViewById(R.id.textViewMrp);
             imageView = itemView.findViewById(R.id.imageView);
+            cardView=itemView.findViewById(R.id.cardviewitem);
             this.onItemListener=onItemListener;
 
-            itemView.setOnClickListener(this);
+            cardView.setOnClickListener(this);
         }
 
         @Override
