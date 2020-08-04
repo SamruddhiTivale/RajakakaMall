@@ -3,17 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:elevation="3dp"
     android:background="@color/white"
     tools:context=".home.PrductDetailsActivity">
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager_product_images"
-        android:layout_width="402dp"
-        android:layout_height="285dp"
+        android:layout_width="318dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,65 +29,110 @@
         app:tabBackground="@drawable/dot_selector"
         app:tabIndicatorHeight="0dp" />
 
-    <TextView
-        android:id="@+id/txtprodetailstitle"
-        android:layout_width="401dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="8dp"
-        android:text="Title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tablayout_view_pager" />
-
-    <TextView
-        android:id="@+id/txtprodetailsprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="4dp"
-        android:text="Rs.5000"
-        android:textColor="@color/Black"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/txtprodetailstitle"
-        app:layout_constraintTop_toBottomOf="@+id/txtprodetailstitle" />
-
-    <TextView
-        android:id="@+id/txtprodetailsmrp"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="4dp"
-        android:text="Rs.6000"
-        android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/txtprodetailsprice"
-        app:layout_constraintTop_toBottomOf="@+id/txtprodetailstitle" />
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
-        android:layout_width="37dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
+        android:id="@+id/detailsfloatingActionButton"
+        android:layout_width="61dp"
+        android:layout_height="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:clickable="true"
-        app:backgroundTint="#FFFFFF"
+        app:backgroundTint="#778899"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewpager_product_images"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/wishlist" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="45dp"
-        android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        app:layout_constraintBottom_toBottomOf="@+id/txtprodetailsmrp"
-        app:layout_constraintEnd_toEndOf="@+id/txtprodetailsmrp"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="@+id/txtprodetailsmrp"
-        app:layout_constraintTop_toTopOf="@+id/txtprodetailsmrp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tablayout_view_pager"
+        app:layout_constraintVertical_bias="0.0">
+
+        <Button
+            android:id="@+id/addtocart"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_below="@+id/txtproductdetailsprice"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="46dp"
+            android:text="Add To Cart"
+            android:background="@color/Black"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/buynow"
+            android:layout_width="wrap_content"
+            android:layout_height="37dp"
+            android:layout_below="@+id/txtproductdetailsmrp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="47dp"
+            android:layout_marginEnd="85dp"
+            android:layout_marginRight="93dp"
+            android:layout_toEndOf="@+id/addtocart"
+            android:layout_toRightOf="@+id/addtocart"
+            android:background="#4169E1"
+            android:text="Buy Now"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txtproductdetailsmrp"
+            android:layout_width="70dp"
+            android:layout_height="20dp"
+            android:layout_alignTop="@+id/txtproductdetailsprice"
+            android:layout_alignBottom="@+id/txtproductdetailsprice"
+            android:layout_marginStart="38dp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="-2dp"
+            android:layout_toEndOf="@+id/txtproductdetailsprice"
+            android:layout_toRightOf="@+id/txtproductdetailsprice"
+            android:text="Rs.6000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtproductdetailsprice"
+            app:layout_constraintStart_toEndOf="@+id/txtproductdetailsprice"
+            app:layout_constraintTop_toTopOf="@+id/txtproductdetailsprice" />
+
+        <TextView
+            android:id="@+id/txtproductdetailstitle"
+            android:layout_width="389dp"
+            android:layout_height="42dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="11dp"
+            android:text="Title"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtproductdetailsprice"
+            android:layout_width="74dp"
+            android:layout_height="21dp"
+            android:layout_below="@id/txtproductdetailstitle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="27dp"
+            android:text="Rs.5000"
+            android:textColor="@color/Black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
